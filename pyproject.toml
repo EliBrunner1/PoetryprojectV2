@@ -1,19 +1,20 @@
 [tool.poetry]
-name = "poetry2"
+name = "my-poetry-project"
 version = "0.1.0"
 description = ""
-authors = ["EliBrunner1 <elibrunner2@gmail.com>"]
+authors = ["EliBrunner2 <elibrunner2@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-pytest = "^8.2.0"
-qtwidgets = "^1.1"
-requests = "^2.31.0"
-qtgui = "^0.0.1"
-flask-sqlalchemy = "^3.1.1"
-numpy = "^1.26.4"
 pandas = "^2.2.2"
+numpy = "^1.26.4"
+matplotlib = "^3.8.4"
+requests = "^2.31.0"
+flask-sqlalchemy = "^3.1.1"
+pyqt6 = "^6.7.0"
+qtwidgets = "^1.1"
+pytest = "^8.2.0"
 
 
 [build-system]

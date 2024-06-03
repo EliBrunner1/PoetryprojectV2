@@ -1,18 +1,7 @@
-# For general python dataFrame manipulation, aggregations, and plots.
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-# For handling API calls. 
-from pprint import pprint
-# For user-friendly data file access.
-import os
 import requests
-from flask_sqlalchemy import SQLAlchemy
-db = SQLAlchemy()
-
 
 class CollegeSchoolFetcher:
-    def __init__(self, api_key,):
+    def __init__(self, api_key):
         self.api_key = api_key
         self.base_url = "https://api.data.gov/ed/collegescorecard/v1/schools?"
 
@@ -41,11 +30,3 @@ if __name__ == "__main__":
         school_city = school.get('school').get('city')
         instate_tuition = school.get('latest').get('cost').get('tuition').get('in_state')
         outstate_tuition = school.get('latest').get('cost').get('tuition').get('out_of_state')
-
-        print(f"School ID: {school_id}")
-        print(f"Name: {school_name}")
-        print(f"State: {school_state}")
-        print(f"City: {school_city}")
-        print(f"In-State Tuition: ${instate_tuition}")
-        print(f"Out-of-State Tuition: ${outstate_tuition}")
-        print("-" * 30)
